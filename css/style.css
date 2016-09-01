@@ -1,0 +1,87 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'http://fonts.googleapis.com/css?family=Raleway:200,400,800';
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans';
+@import 'https://fonts.googleapis.com/css?family=Londrina+Solid';
+@import 'https://fonts.googleapis.com/css?family=Candal';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+html, body 
+{
+  height: 100%; 
+  width: 100%;
+}
+
+body {
+  background: #fff;
+  color: #383a3c;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+}
+
+p {
+	/* font-style font-variant font-weight font-size/line-height font-family */
+  font: normal normal normal 1.5em/30px VT323;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+/*start large header*/
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  background: #d1d8e0;
+}
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  text-transform: uppercase;
+  font-size: 9.0em;
+  letter-spacing: 0.2em;
+  padding: 20px 50px;
+  /*border: 10px double #f9f1e9;*/
+  border: 10px double #3a39e5;
+  text-transform: uppercase;
+  font-family: Londrina Solid, sans-serif;
+  color: #3a39e5;
+}
+
+.sub-title {
+  position: absolute;
+  text-align: center;
+  top: 75%;
+  left: 28%;
+  font: bold normal normal 2.5em/20px Ubuntu;
+  color: #111144;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width : 768px) {
+  .main-title{
+    font-size: 3em;
+  }
+  .sub-title {
+    font-size: 1.2em;
+    left: 5%;
+    top: 65%;
+  }
+}
+/*end large header*/
+
+
