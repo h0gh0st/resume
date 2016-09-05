@@ -13,7 +13,6 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/chartist.min.css" />
 
 	</head>
 
@@ -40,7 +39,7 @@
 	                </div>
 				</div>
 
-				<section class="quote">
+				<section class="quote" id="q1">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
 							<p class="main-quote text-center">The only reason coders computers work better than non-coders' computers is coders know computers are schizophrenic little children with auto-immune diseases and we don't beat them when they're bad.</p>
@@ -50,7 +49,9 @@
 				</section>
 				
 				<section class="intro">
-					<!-- <h1>About Me</h1> -->
+					<div class="row">
+						<div class="col-md-12 text-center"><p class="to_shuffle">Introductions</p></div>
+					</div>
 					<div class="row">
 						<div class="col-md-3 col-md-offset-1 col-xs-12">
 							<img class="img-responsive profile-pic" src="img/profile_pic.jpg" />
@@ -63,7 +64,7 @@
 					</div>
 				</section>
 
-				<section class="quote">
+				<section class="quote" id="q2">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
 							<p class="main-quote-malay text-center">Seperti jarum yang berputar,<br/>ke suatu sudut dan arah,<br/>mengumpul segala rahsia,<br/>memulakan suatu perjalanan.</p>
@@ -74,8 +75,46 @@
 
 				<section class="skills">
 					<div class="row">
-						<div class="ct-chart ct-perfect-first"></div>
-					</div>
+						<div class="col-md-12 text-center"><p class="to_shuffle">Skills I Posses</p></div>
+					</div>		
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 table-responsive">
+							<table class="full_skill">
+								<tr>
+									<div class="progress">
+										<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width: 100%">
+									</div>
+									<td>PM</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>WD</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+
+								</tr>
+								<tr>
+									<td>DD</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>MD</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+					</div>				
 				</section>
 
 			</div>
@@ -88,40 +127,38 @@
         <script src="js/EasePack.min.js"></script>
         <script src="js/rAF.js"></script>
         <script src="js/header-large.js"></script>
-        <script src="js/chartist.min.js"></script>
+
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/shuffleLetters.js"></script>
 
         <script>
 
         	$(document).ready(function() {
 
+        		$('.to_shuffle').hide();
+
         		$('[data-toggle="tooltip"]').tooltip(); 
 
-        		var data = {
-				  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-				  series: [
-				    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-				    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-				  ]
-				};
+        		var waypoint1 = new Waypoint({
+        			element: document.getElementById('q1'),
+        			handler: function() {
+        				var run_shuffle = $(".intro h1");
+        				run_shuffle.show();
+						run_shuffle.shuffleLetters();
+        			}
+        		});
+        		var waypoint2 = new Waypoint({
+        			element: document.getElementById('q2'),
+        			handler: function() {
+        				var run_shuffle = $(".skills h1");
+        				run_shuffle.show();
+						run_shuffle.shuffleLetters();
+        			}
+        		});
 
-				var options = {
-				  seriesBarDistance: 10
-				};
+        		
 
-				var responsiveOptions = [
-				  ['screen and (max-width: 640px)', {
-				    seriesBarDistance: 5,
-				    axisX: {
-				      labelInterpolationFnc: function (value) {
-				        return value[0];
-				      }
-				    }
-				  }]
-				];
-
-				new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
-
-
+				
         	});
 
 		</script>

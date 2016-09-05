@@ -21,7 +21,6 @@ body {
 
 p {
 	/* font-style font-variant font-weight font-size/line-height font-family */
-  font: normal normal normal 1.5em/30px VT323;
 }
 
 .social-nav {
@@ -122,6 +121,12 @@ p {
   margin-right: 5%;
 }
 
+.to_shuffle {
+  font: normal normal normal 4em/20px Candal;
+  text-transform: uppercase;
+  padding-bottom: 1%;
+}
+
 .intro {
   background-color: #fad2fa;
   padding: 5% 0;
@@ -144,6 +149,29 @@ p {
 
 .tooltip {
   font-size: 0.7em;
+}
+
+.skills {
+  background-color: #99cc99;
+  padding: 5% 0;
+}
+
+.full_skill {
+  width: 100%;
+}
+
+.full_skill td {
+  position: relative;
+  width: 20%;
+  border: solid 1px black;
+  font-size: 2em;
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
 }
 
 @media only screen and (max-width : 768px) {
