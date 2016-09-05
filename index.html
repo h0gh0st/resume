@@ -10,16 +10,27 @@
 		<meta name="author" content="" />
 		<link rel="shortcut icon" href=""> <!--favicon link-->
 
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-superhero.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/chartist.min.css" />
 
 	</head>
 
 	<body>
 
 		<!-- start main body -->
+			<!-- <nav class="social-nav">
+				<ul>
+					<li><a href="#"><img src="img/social-icon/icon-facebook.png" /></a></li>
+					<li><a href="#"><img src="img/social-icon/icon-twitter.png" /></a></li>
+					<li><a href="#"><img src="img/social-icon/icon-google.png" /></a></li>
+					<li><a href="#"><img src="img/social-icon/icon-dribbble.png" /></a></li>
+					<li><a href="#"><img src="img/social-icon/icon-linkedin.png" /></a></li>
+					<li><a href="#"><img src="img/social-icon/icon-pinterest.png" /></a></li>
+				</ul>
+			</nav> -->
+
 			<div class="container">
 				<div class="content">
 					<div id="large-header" class="large-header">
@@ -28,19 +39,92 @@
 	                    <h2 class="sub-title">Programmer &#9475; &nbsp; Ninja &nbsp; &#9475; Tech-Enthusiast</h2>
 	                </div>
 				</div>
-				<h1>Hello World</h1>
+
+				<section class="quote">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+							<p class="main-quote text-center">The only reason coders computers work better than non-coders' computers is coders know computers are schizophrenic little children with auto-immune diseases and we don't beat them when they're bad.</p>
+							<p class="sub-quote text-right">Peter Welsh</p>
+						</div>
+					</div>
+				</section>
+				
+				<section class="intro">
+					<!-- <h1>About Me</h1> -->
+					<div class="row">
+						<div class="col-md-3 col-md-offset-1 col-xs-12">
+							<img class="img-responsive profile-pic" src="img/profile_pic.jpg" />
+						</div>
+						<div class="col-md-7 col-md-offset-0 col-xs-10 col-xs-offset-1">
+							<p class="intro-text">Hello there, i'm <span data-toggle="tooltip" title="@hogslumber">Kamal Kumar</span> and this is my digital carbon footprint for the internet. Born and raised in the <span data-toggle="tooltip" title="Penang, Malaysia">Pearl of the Orient,</span> and have been on this quest called <span data-toggle="tooltip" title="I believe the answer is 42">life</span> since 1993.</p>
+							<p class="intro-text">My fascination with the world of science and technology eventually lead me to graduate with a degree on <span data-toggle="tooltip" title="BSc. (Hons) Information Technology">IT</span> in 2016. With my newly found wisdom i wish to play my part in making the world a better place.</p>
+							<p class="intro-text">Drop me an email if you want to collborate on any exciting projects.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="quote">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+							<p class="main-quote-malay text-center">Seperti jarum yang berputar,<br/>ke suatu sudut dan arah,<br/>mengumpul segala rahsia,<br/>memulakan suatu perjalanan.</p>
+							<p class="sub-quote text-right">Ahmad Sarju; Waktu; 1984</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="skills">
+					<div class="row">
+						<div class="ct-chart ct-perfect-first"></div>
+					</div>
+				</section>
+
 			</div>
 		<!-- end main body -->
 
-		<script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-		 <script src="js/TweenLite.min.js"></script>
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<script src="js/TweenLite.min.js"></script>
         <script src="js/EasePack.min.js"></script>
         <script src="js/rAF.js"></script>
         <script src="js/header-large.js"></script>
+        <script src="js/chartist.min.js"></script>
 
-		<script>
+        <script>
+
+        	$(document).ready(function() {
+
+        		$('[data-toggle="tooltip"]').tooltip(); 
+
+        		var data = {
+				  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				  series: [
+				    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+				    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+				  ]
+				};
+
+				var options = {
+				  seriesBarDistance: 10
+				};
+
+				var responsiveOptions = [
+				  ['screen and (max-width: 640px)', {
+				    seriesBarDistance: 5,
+				    axisX: {
+				      labelInterpolationFnc: function (value) {
+				        return value[0];
+				      }
+				    }
+				  }]
+				];
+
+				new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+
+
+        	});
 
 		</script>
+
 	</body>
 </html>

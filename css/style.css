@@ -24,6 +24,24 @@ p {
   font: normal normal normal 1.5em/30px VT323;
 }
 
+.social-nav {
+  position:fixed;
+  top: 0px;
+  left: 40px;
+  z-index: 999;
+}
+.social-nav ul {margin: 0; padding:0;}
+.social-nav ul li{
+  list-style: none;
+  display:block;
+  float: left;
+  background: #393939;
+  padding:100px 10px 5px 10px;
+  margin: 1px;
+  opacity: .5;
+}
+.social-nav ul li:hover {opacity: 1;}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -52,7 +70,7 @@ p {
   -webkit-transform: translate3d(-50%,-50%,0);
   transform: translate3d(-50%,-50%,0);
   text-transform: uppercase;
-  font-size: 9.0em;
+  font-size: 10.0em;
   letter-spacing: 0.2em;
   padding: 20px 50px;
   /*border: 10px double #f9f1e9;*/
@@ -66,20 +84,98 @@ p {
   position: absolute;
   text-align: center;
   top: 75%;
-  left: 28%;
+  left: 30%;
   font: bold normal normal 2.5em/20px Ubuntu;
   color: #111144;
   text-transform: uppercase;
 }
 
+.quote {
+  width: 100%;
+  padding: 5% 0;
+  /*background-color: #FFFAFA;*/
+}
+
+.main-quote {
+  color: #ffd700;
+  font-size: 3em;
+  text-align: left;
+  line-height: 40px;
+}
+
+.main-quote:before {
+  position: relative;
+  content: "\201C";
+  font-size: 2em;
+  padding-right: 2%;
+}
+
+.main-quote-malay {
+  color: #ffd700;
+  font-size: 3em;
+  text-align: center;
+  line-height: 40px;
+}
+
+.sub-quote {
+  font-size: 2em;
+  margin-right: 5%;
+}
+
+.intro {
+  background-color: #fad2fa;
+  padding: 5% 0;
+}
+
+.profile-pic {
+  width: 80%;
+  margin-top: 20%;
+  border-radius: 30px;
+}
+
+.intro-text {
+  font: normal normal normal 3em/45px Raleway;
+  padding-top: 1%;
+}
+
+.intro-text span {
+  border-bottom: dotted 2px black;
+}
+
+.tooltip {
+  font-size: 0.7em;
+}
+
 @media only screen and (max-width : 768px) {
-  .main-title{
-    font-size: 3em;
+  .main-title {
+    font-size: 4em;
   }
   .sub-title {
     font-size: 1.2em;
-    left: 5%;
-    top: 65%;
+    left: 17%;
+    top: 70%;
+  }
+  .social-nav {
+    position:fixed;
+    top: 0px;
+    left: 00px;
+    z-index: 999;
+  }
+  .social-nav ul li{
+    padding:10px 10px 5px 10px;
+    margin: 1px;
+    opacity: .5;
+  }
+  .profile-pic {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2% 0;
+  }
+  .intro-text {
+    font: normal normal normal 2.4em/35px Raleway;
+  }
+  .intro-text span {
+    border: none;
   }
 }
 /*end large header*/
