@@ -1,20 +1,19 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
-@import 'http://fonts.googleapis.com/css?family=Raleway:200,400,800';
+@import 'http://fonts.googleapis.com/css?family=Raleway';
 @import 'https://fonts.googleapis.com/css?family=Droid+Sans';
 @import 'https://fonts.googleapis.com/css?family=Londrina+Solid';
 @import 'https://fonts.googleapis.com/css?family=Candal';
 @import 'https://fonts.googleapis.com/css?family=Ubuntu';
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower';
 
 html, body 
 {
   height: 100%; 
-  width: 100%;
 }
 
 body {
   background: #fff;
   color: #383a3c;
-  font-weight: 400;
   font-size: 1em;
   line-height: 1.25;
 }
@@ -91,26 +90,13 @@ p {
 
 .quote {
   width: 100%;
-  padding: 5% 0;
-  /*background-color: #FFFAFA;*/
+  padding: 7% 0 5% 0;
+  font: bold normal 10px Indie Flower;
+  background-color: #3a000f;
+  color: #ffd700;
 }
 
 .main-quote {
-  color: #ffd700;
-  font-size: 3em;
-  text-align: left;
-  line-height: 40px;
-}
-
-.main-quote:before {
-  position: relative;
-  content: "\201C";
-  font-size: 2em;
-  padding-right: 2%;
-}
-
-.main-quote-malay {
-  color: #ffd700;
   font-size: 3em;
   text-align: center;
   line-height: 40px;
@@ -118,18 +104,54 @@ p {
 
 .sub-quote {
   font-size: 2em;
-  margin-right: 5%;
+  margin-right: 0%;
 }
 
-.to_shuffle {
-  font: normal normal normal 4em/20px Candal;
-  text-transform: uppercase;
-  padding-bottom: 1%;
+#q1:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 80px;
+  height: 80px;
+  bottom: -55px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #d1d8e0;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+section:after {
+  display:block;
+  position:absolute;
+  content:'';
+  margin-top: 38px;
+  background: #3a000f;
+  box-shadow: -50px 50px 0 #3a000f, 50px -50px 0 #3a000f; /* Change The Hex Values */
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 200;
+}
+
+section > .row {
+  margin-top: 4%;
 }
 
 .intro {
-  background-color: #fad2fa;
+  background-color: #e5f1f1;
   padding: 5% 0;
+}
+
+.to_shuffle {
+  position: absolute;
+  left: 38%;
+  font: normal normal normal 4em/20px Candal;
+  text-transform: uppercase;
 }
 
 .profile-pic {
@@ -140,7 +162,6 @@ p {
 
 .intro-text {
   font: normal normal normal 3em/45px Raleway;
-  padding-top: 1%;
 }
 
 .intro-text span {
@@ -152,27 +173,213 @@ p {
 }
 
 .skills {
-  background-color: #99cc99;
+  background-color: #e5f1f1;
   padding: 5% 0;
 }
 
-.full_skill {
-  width: 100%;
+.skill_header p {
+  border: solid 1px grey;
+  font: 2em/30px Ubuntu;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
 }
 
-.full_skill td {
+.skill_header p:after {
+  position: absolute;
+  left: 7%;
+  top: 70%;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: solid 15px #000;
+  border-right: solid 12px transparent;
+}
+
+.full_skill {
+  width: 90%;
+  margin-top: 0%;
+}
+
+.full_skill tr td {
   position: relative;
   width: 20%;
-  border: solid 1px black;
-  font-size: 2em;
+  text-align: center;
+  font: normal normal normal 1.7em/45px Ubuntu;
+  border-left: dashed 2px #808080;
+  border-right: dashed 2px #808080;
+}
+
+.full_skill tr td:first-child {
+  border: none;
+  border-right: solid 2px #808080;
+}
+
+.full_skill tr:last-child td {
+  text-align: right;
+  left: 2.5%;
+  font: italic normal normal 1.5em/40px Ubuntu;
+  border: none;
+}
+
+.progress-box {
+  position: absolute;  
+  left: 19%;
+  width: 77%;
+}
+
+.progress-box:nth-child(1) {
+  top: 5%;
+}
+
+.progress-box:nth-child(2) {
+  top: 19%;
+}
+
+.progress-box:nth-child(3) {
+  top: 34%;
+}
+
+.progress-box:nth-child(4) {
+  top: 48%;
+}
+
+.progress-box:nth-child(5) {
+  top: 62%;
+}
+
+.progress-box:nth-child(6) {
+  top: 78%;
 }
 
 .progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 20;
+  width: 91%; 
 }
+
+.spec_skill {
+  font: normal normal normal 3em/45px Droid Sans;
+}
+
+.spec_skill > ol > li { 
+  text-transform: uppercase;
+  padding: 2% 0 2% 0;
+  list-style-position: inside;
+}
+
+.spec_skill li {
+  font-weight: bold;  
+}
+
+.spec_skill ul {
+  padding: 5% 10%;
+  list-style-type: square;
+  border-bottom: dashed 3px #888888;
+}
+
+.misc {
+  background-color: #e5f1f1;
+  padding: 5% 0;
+}
+
+.misc h2 {
+  text-transform: uppercase;
+  font: italic bold 24px Raleway;
+  text-align: left;
+  padding-left: 8%;
+}
+
+.button--moema {
+  padding: 1.5em 3em;
+  border-radius: 50px;
+  background: #7986cb;
+  color: #fff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.5em;
+  text-align: center;
+  margin-left: -15%;
+  margin-right: 15%;
+}
+.button--moema::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  background: inherit;
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.4;
+  -webkit-transform: scale3d(0.8, 0.5, 1);
+  transform: scale3d(0.8, 0.5, 1);
+}
+.button--moema:hover {
+  -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  color: #ECEFF1;
+  background-color: #3f51b5;
+  -webkit-animation: anim-moema-1 0.3s forwards;
+  animation: anim-moema-1 0.3s forwards;
+}
+.button--moema:hover::before {
+  -webkit-animation: anim-moema-2 0.3s 0.3s forwards;
+  animation: anim-moema-2 0.3s 0.3s forwards;
+}
+@-webkit-keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.footer {
+  height: 50px;
+  content: '';
+  background-color: #3a000f;
+}
+
+section:last-child:after {
+  display: none;
+}
+
 
 @media only screen and (max-width : 768px) {
   .main-title {
@@ -194,10 +401,27 @@ p {
     margin: 1px;
     opacity: .5;
   }
+  #q1:before {
+    display:none;
+  }
+  section:after {
+    display: none;
+  }
+  .main-quote {
+    font-size: 2em;
+    line-height: 25px;
+  }
+  .sub-quote {
+    font-size: 1.2em;
+  }
+  .to_shuffle {
+    left: 20%;
+    font: normal normal normal 3em/20px Candal;
+  }
   .profile-pic {
     width: 50%;
     margin: 0 auto;
-    padding: 2% 0;
+    padding: 5% 0;
   }
   .intro-text {
     font: normal normal normal 2.4em/35px Raleway;
@@ -205,7 +429,61 @@ p {
   .intro-text span {
     border: none;
   }
+  .skill_head_1 {
+    margin-top: 10%;
+  }
+  .full_skill tr td:first-child {
+    border: none;
+  }
+  .full_skill tr td {
+    font: normal normal normal 1em/15px Ubuntu;
+    border-left: dashed 1px #808080;
+    border-right: dashed 1px #808080;
+    padding: 1% 0;
+  }
+  .full_skill tr:last-child td {
+    text-align: right;
+    left: 2.5%;
+    font: italic normal normal 1em/40px Ubuntu;
+    border: none;
+  }
+  .progress-box {
+    position: absolute;  
+    left: 21%;
+    width: 73%;
+  }
+  .progress-box:nth-child(1) {
+    top: 5%;
+  }
+  .progress-box:nth-child(2) {
+    top: 20%;
+  }
+  .progress-box:nth-child(3) {
+    top: 35%;
+  }
+  .progress-box:nth-child(4) {
+    top: 50%;
+  }
+  .progress-box:nth-child(5) {
+    top: 63%;
+  }
+  .progress-box:nth-child(6) {
+    top: 72%;
+  }
+  .progress {
+    height: 15px;
+  }
+  .skill_header p {
+    font: 1em/30px Ubuntu;
+    margin-left: 10%;
+  }
+  .skill_header p:after {
+    left: 22%;
+  }
+  .spec_skill {
+    font: normal normal normal 2em/30px Droid Sans;
+  }
 }
-/*end large header*/
+
 
 
