@@ -178,8 +178,7 @@ section > .row {
 }
 
 .skill_header p {
-  border: solid 1px grey;
-  font: 2em/30px Ubuntu;
+  font: 2em/35px Ubuntu;
   text-align: center;
   background-color: #000;
   color: #fff;
@@ -187,14 +186,15 @@ section > .row {
 }
 
 .skill_header p:after {
+  display: inline-block;
   position: absolute;
-  left: 7%;
+  left: 6.5%;
   top: 70%;
   content: '';
   width: 0;
   height: 0;
-  border-top: solid 15px #000;
-  border-right: solid 12px transparent;
+  border-top: solid 20px #000;
+  border-right: solid 20px transparent;
 }
 
 .full_skill {
@@ -258,13 +258,20 @@ section > .row {
 }
 
 .spec_skill {
-  font: normal normal normal 3em/45px Droid Sans;
+  
 }
 
 .spec_skill > ol > li { 
   text-transform: uppercase;
   padding: 2% 0 2% 0;
   list-style-position: inside;
+  border-bottom: solid 3px #888888;
+  font: bold normal normal 3em/45px Droid Sans;
+}
+
+.spec_skill > ol > p { 
+  padding-top: 1%;
+  font: normal normal normal 2.8em/40px Lucida;
 }
 
 .spec_skill li {
@@ -272,9 +279,9 @@ section > .row {
 }
 
 .spec_skill ul {
-  padding: 5% 10%;
+  padding: 1% 0% 5% 10%;
   list-style-type: square;
-  border-bottom: dashed 3px #888888;
+  font: normal normal normal 2.3em/35px Book Antiqua;
 }
 
 .misc {
