@@ -1,0 +1,120 @@
+@media only screen and (max-width : 768px) {
+  .social-nav {
+    position:fixed;
+    top: 0px;
+    left: 00px;
+    z-index: 999;
+  }
+  .social-nav ul li{
+    padding:10px 10px 5px 10px;
+    margin: 1px;
+    opacity: .5;
+  }
+
+  .main-title {
+    font-size: 6em;
+  }
+  .sub-title {
+    font-size: 2.2em;
+    left: 15%;
+    top: 70%;
+  }
+
+  .main-quote {
+    font-size: 2.5em;
+    line-height: 30px;
+  }
+  .sub-quote {
+    font-size: 1.8em;
+  }
+
+  .to_shuffle {
+    left: 42%;
+    font: normal normal normal 3em/20px Candal;
+  }
+
+  .profile-pic {
+    width: 30%;
+    margin: 0 auto;
+    padding: 5% 0;
+  }
+  .intro-text {
+    text-align: center;
+    font: normal normal normal 2.4em/35px Raleway;
+  }
+  .intro-text span {
+    border: none;
+  }
+
+  .skill_header p {
+    font: 1.5em/30px Ubuntu;
+    margin-top: 5%;
+  }
+  .skill_header p:after {
+    display: none;
+  }
+
+  .full_skill tr td:first-child {
+    border: none;
+  }
+  .full_skill tr td {
+    font: normal normal normal 1.5em/15px Ubuntu;
+    border-left: dashed 1px #808080;
+    border-right: dashed 1px #808080;
+    padding: 1% 0;
+  }
+  .full_skill tr:last-child td {
+    text-align: right;
+    left: 2%;
+    font: italic normal normal 1.3em/40px Ubuntu;
+    border: none;
+  }
+  .progress-box {
+    position: absolute;  
+    left: 21%;
+    width: 73%;
+  }
+  .progress-box:nth-child(1) {
+    top: 5%;
+  }
+  .progress-box:nth-child(2) {
+    top: 20%;
+  }
+  .progress-box:nth-child(3) {
+    top: 35%;
+  }
+  .progress-box:nth-child(4) {
+    top: 50%;
+  }
+  .progress-box:nth-child(5) {
+    top: 63%;
+  }
+  .progress-box:nth-child(6) {
+    top: 73%;
+  }
+  .progress {
+    height: 15px;
+  }
+
+  .spec_skill > ol > li { 
+    font: bold normal normal 2.2em/45px Droid Sans;
+  }
+  .spec_skill > ol > p { 
+    font: normal normal normal 2.5em/30px Lucida, sans-serif;
+  }
+  .spec_skill ul {
+    font: normal normal normal 2.2em/35px Book Antiqua, sans-serif;
+  }
+
+  .misc h2 {
+    font: italic bold 2em Raleway;
+    text-align: center;
+    padding-left: 8%;
+  }
+  .button--moema {
+    padding: 1.5em 2em;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}

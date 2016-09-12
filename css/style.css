@@ -6,22 +6,14 @@
 @import 'https://fonts.googleapis.com/css?family=Ubuntu';
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
 
-html, body 
-{
-  height: 100%; 
-}
-
 body {
   background: #fff;
-  color: #383a3c;
+  color: #fff;
   font-size: 1em;
-  line-height: 1.25;
+  line-height: 1;
 }
 
-p {
-	/* font-style font-variant font-weight font-size/line-height font-family */
-}
-
+/*start social bar*/
 .social-nav {
   position:fixed;
   top: 0px;
@@ -39,25 +31,30 @@ p {
   opacity: .5;
 }
 .social-nav ul li:hover {opacity: 1;}
+/*end social bar*/
 
 .container {
   margin: 0 auto;
   width: 100%;
-  padding: 0;
+  overflow: hidden;
+}
+.quote-section {
+  background-color: #FFFFCC;
+}
+.content-section {
+  background-color: #9999CC;
 }
 
 /*start large header*/
 .large-header {
   position: relative;
   width: 100%;
-  background: #333;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  background: #d1d8e0;
+  background-color: #ffffcc;
 }
-
 .main-title {
   position: absolute;
   margin: 0;
@@ -77,106 +74,93 @@ p {
   font-family: Londrina Solid, sans-serif;
   color: #3a39e5;
 }
-
 .sub-title {
   position: absolute;
   text-align: center;
   top: 75%;
   left: 30%;
   font: bold normal normal 2.5em/20px Ubuntu;
-  color: #111144;
+  color: #9999CC;
   text-transform: uppercase;
 }
+/*end large header*/
 
+/*start quote*/
 .quote {
-  width: 100%;
-  padding: 7% 0 5% 0;
+  padding: 10% 0 5% 0;
   font: bold normal 10px Indie Flower;
-  background-color: #3a000f;
-  color: #ffd700;
+  color: black;
 }
-
 .main-quote {
   font-size: 3em;
   text-align: center;
   line-height: 40px;
 }
-
 .sub-quote {
   font-size: 2em;
   margin-right: 0%;
 }
-
-#q1:before {
+/*#q1:before {
   display: block;
   position: absolute;
   content: '';
-  width: 80px;
-  height: 80px;
-  bottom: -55px;
+  width: 40px;
+  height: 40px;
+  bottom: -50px;
   left: 50%;
   margin-left: -50px;
-  background-color: #d1d8e0;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 1;
-}
-
-section:after {
-  display:block;
-  position:absolute;
-  content:'';
-  margin-top: 38px;
-  background: #3a000f;
-  box-shadow: -50px 50px 0 #3a000f, 50px -50px 0 #3a000f; /* Change The Hex Values */
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-transform: translateX(-50%) rotate(45deg);
-  transform: translateX(-50%) rotate(45deg);
-  z-index: 200;
-}
-
-section > .row {
-  margin-top: 4%;
-}
-
-.intro {
-  background-color: #e5f1f1;
-  padding: 5% 0;
-}
+  box-shadow:
+        0 0 20px 10px #fff, 
+        0 0 40px 10px #f0f, 
+        0 0 120px 10px #0ff; 
+}*/
+/*end quote*/
 
 .to_shuffle {
   position: absolute;
-  left: 38%;
   font: normal normal normal 4em/20px Candal;
   text-transform: uppercase;
+  left: 43%; 
+  margin-left: -80px;
+  color: #ffffcc;
 }
 
+/*start intro section*/
+.intro {
+  color: #ffffcc;
+  padding: 3% 0;
+}
+.intro-content {
+  padding: 5% 0 3% 0;
+}
 .profile-pic {
   width: 80%;
   margin-top: 20%;
   border-radius: 30px;
 }
-
 .intro-text {
   font: normal normal normal 3em/45px Raleway;
 }
-
 .intro-text span {
   border-bottom: dotted 2px black;
 }
-
 .tooltip {
   font-size: 0.7em;
 }
+/*end intro section*/
 
+/*start skill section*/
 .skills {
-  background-color: #e5f1f1;
-  padding: 5% 0;
+  color: #ffffcc;
+  padding: 3% 0;
 }
-
+.skills-content {
+  padding: 5% 0 3% 0;
+}
 .skill_header p {
   font: 2em/35px Ubuntu;
   text-align: center;
@@ -184,7 +168,6 @@ section > .row {
   color: #fff;
   text-transform: uppercase;
 }
-
 .skill_header p:after {
   display: inline-block;
   position: absolute;
@@ -201,7 +184,6 @@ section > .row {
   width: 90%;
   margin-top: 0%;
 }
-
 .full_skill tr td {
   position: relative;
   width: 20%;
@@ -210,55 +192,41 @@ section > .row {
   border-left: dashed 2px #808080;
   border-right: dashed 2px #808080;
 }
-
 .full_skill tr td:first-child {
   border: none;
   border-right: solid 2px #808080;
 }
-
 .full_skill tr:last-child td {
   text-align: right;
   left: 2.5%;
   font: italic normal normal 1.5em/40px Ubuntu;
   border: none;
 }
-
 .progress-box {
   position: absolute;  
   left: 19%;
   width: 77%;
 }
-
 .progress-box:nth-child(1) {
   top: 5%;
 }
-
 .progress-box:nth-child(2) {
   top: 19%;
 }
-
 .progress-box:nth-child(3) {
   top: 34%;
 }
-
 .progress-box:nth-child(4) {
   top: 48%;
 }
-
 .progress-box:nth-child(5) {
   top: 62%;
 }
-
 .progress-box:nth-child(6) {
   top: 78%;
 }
-
 .progress {
   width: 91%; 
-}
-
-.spec_skill {
-  
 }
 
 .spec_skill > ol > li { 
@@ -268,27 +236,28 @@ section > .row {
   border-bottom: solid 3px #888888;
   font: bold normal normal 3em/45px Droid Sans;
 }
-
 .spec_skill > ol > p { 
   padding-top: 1%;
-  font: normal normal normal 2.8em/40px Lucida;
+  font: normal normal normal 2.8em/40px Lucida, sans-serif;
 }
-
 .spec_skill li {
   font-weight: bold;  
 }
-
 .spec_skill ul {
   padding: 1% 0% 5% 10%;
   list-style-type: square;
-  font: normal normal normal 2.3em/35px Book Antiqua;
+  font: normal normal normal 2.3em/35px Book Antiqua, sans-serif;
 }
+/*end skill section*/
 
+/*start misc section*/
 .misc {
-  background-color: #e5f1f1;
-  padding: 5% 0;
+  color: #ffffcc;
+  padding: 3% 0;
 }
-
+.misc-content {
+  padding: 5% 0 3% 0;
+}
 .misc h2 {
   text-transform: uppercase;
   font: italic bold 24px Raleway;
@@ -307,6 +276,7 @@ section > .row {
   text-align: center;
   margin-left: -15%;
   margin-right: 15%;
+  cursor: crosshair;
 }
 .button--moema::before {
   content: '';
@@ -376,121 +346,14 @@ section > .row {
     transform: scale3d(1, 1, 1);
   }
 }
+/*end misc section*/
 
-.footer {
-  height: 50px;
-  content: '';
-  background-color: #3a000f;
-}
-
-section:last-child:after {
-  display: none;
-}
-
-
-@media only screen and (max-width : 768px) {
-  .main-title {
-    font-size: 4em;
+/*start modal box*/
+  .modal-body {
+    font: normal normal 2em /25px Ubuntu, sans-serif;
+    color: black;
   }
-  .sub-title {
-    font-size: 1.2em;
-    left: 17%;
-    top: 70%;
-  }
-  .social-nav {
-    position:fixed;
-    top: 0px;
-    left: 00px;
-    z-index: 999;
-  }
-  .social-nav ul li{
-    padding:10px 10px 5px 10px;
-    margin: 1px;
-    opacity: .5;
-  }
-  #q1:before {
-    display:none;
-  }
-  section:after {
-    display: none;
-  }
-  .main-quote {
-    font-size: 2em;
-    line-height: 25px;
-  }
-  .sub-quote {
-    font-size: 1.2em;
-  }
-  .to_shuffle {
-    left: 20%;
-    font: normal normal normal 3em/20px Candal;
-  }
-  .profile-pic {
-    width: 50%;
-    margin: 0 auto;
-    padding: 5% 0;
-  }
-  .intro-text {
-    font: normal normal normal 2.4em/35px Raleway;
-  }
-  .intro-text span {
-    border: none;
-  }
-  .skill_head_1 {
-    margin-top: 10%;
-  }
-  .full_skill tr td:first-child {
-    border: none;
-  }
-  .full_skill tr td {
-    font: normal normal normal 1em/15px Ubuntu;
-    border-left: dashed 1px #808080;
-    border-right: dashed 1px #808080;
-    padding: 1% 0;
-  }
-  .full_skill tr:last-child td {
-    text-align: right;
-    left: 2.5%;
-    font: italic normal normal 1em/40px Ubuntu;
-    border: none;
-  }
-  .progress-box {
-    position: absolute;  
-    left: 21%;
-    width: 73%;
-  }
-  .progress-box:nth-child(1) {
-    top: 5%;
-  }
-  .progress-box:nth-child(2) {
-    top: 20%;
-  }
-  .progress-box:nth-child(3) {
-    top: 35%;
-  }
-  .progress-box:nth-child(4) {
-    top: 50%;
-  }
-  .progress-box:nth-child(5) {
-    top: 63%;
-  }
-  .progress-box:nth-child(6) {
-    top: 72%;
-  }
-  .progress {
-    height: 15px;
-  }
-  .skill_header p {
-    font: 1em/30px Ubuntu;
-    margin-left: 10%;
-  }
-  .skill_header p:after {
-    left: 22%;
-  }
-  .spec_skill {
-    font: normal normal normal 2em/30px Droid Sans;
-  }
-}
+/*end modal box*/
 
 
 
