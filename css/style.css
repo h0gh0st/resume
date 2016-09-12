@@ -346,6 +346,9 @@ body {
     transform: scale3d(1, 1, 1);
   }
 }
+.button--moema a {
+  color: inherit;
+}
 /*end misc section*/
 
 /*start modal box*/
