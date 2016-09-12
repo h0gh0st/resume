@@ -118,3 +118,62 @@
     margin-right: 0%;
   }
 }
+
+@media only screen and (max-width : 480px) {
+  .sub-title {
+    font-size: 1.5em;
+  }
+  .sub-quote {
+    text-align: center;
+  }
+  .to_shuffle {
+    left: 45%;
+    font: normal normal normal 2.5em/20px Candal;
+  }
+  .skills-content {
+    padding: 10% 0 3% 0;
+  }
+  .full_skill tr:last-child {
+    display: none;
+  }
+  .full_skill tr td {
+    border: none;
+  }
+  .full_skill tr td:first-child {
+    width: 100%;
+    padding: 5% 0;
+    text-align: left;
+  }
+  .progress-box {
+    position: absolute;  
+    left: 3%;
+    width: 77%;
+  }
+  .progress-box:nth-child(1) {
+    top: 12%;
+  }
+  .progress-box:nth-child(2) {
+    top: 30%;
+  }
+  .progress-box:nth-child(3) {
+    top: 45%;
+  }
+  .progress-box:nth-child(4) {
+    top: 62%;
+  }
+  .progress-box:nth-child(5) {
+    top: 80%;
+  }
+  .progress-box:nth-child(6) {
+    top: 95%;
+  }
+
+  .skill_header:nth-child(1) {
+    margin-top: 3%;
+  }
+
+  .modal-body {
+    font: normal normal 1.5em /20px Ubuntu, sans-serif;
+    color: black;
+  }
+}

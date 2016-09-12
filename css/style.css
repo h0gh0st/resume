@@ -7,7 +7,7 @@
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
 
 body {
-  background: #fff;
+  background: #99CC99;
   color: #fff;
   font-size: 1em;
   line-height: 1;
@@ -39,7 +39,7 @@ body {
   overflow: hidden;
 }
 .quote-section {
-  background-color: #FFFFCC;
+  background-color: transparent;
 }
 .content-section {
   background-color: #9999CC;
@@ -53,7 +53,7 @@ body {
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  background-color: #ffffcc;
+  background-color: #99CC99;
 }
 .main-title {
   position: absolute;
