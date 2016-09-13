@@ -119,6 +119,13 @@
   }
 }
 
+@media screen and (max-width : 640px) {
+  .sub-title {
+    font-size: 1.3em;
+    left: 0%;
+  }
+}
+
 @media screen and (max-width : 480px) {
   .sub-title {
     font-size: 1.3em;
