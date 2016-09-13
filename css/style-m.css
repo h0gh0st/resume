@@ -16,8 +16,6 @@
   }
   .sub-title {
     font-size: 1.8em;
-    left: 10%;
-    top: 70%;
   }
 
   .main-quote {
@@ -119,17 +117,10 @@
   }
 }
 
-@media screen and (max-width : 640px) {
-  .sub-title {
-    font-size: 1.3em;
-    left: 0%;
-  }
-}
 
 @media screen and (max-width : 480px) {
   .sub-title {
     font-size: 1.3em;
-    left: 10%;
   }
   .sub-quote {
     text-align: center;
@@ -184,8 +175,4 @@
     font: normal normal 1.5em /20px Ubuntu, sans-serif;
     color: black;
   }
-}
-
-@media only screen and (max-width : 480px) {
-
 }
