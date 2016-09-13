@@ -1,4 +1,4 @@
-@media only screen and (max-width : 768px) {
+@media screen and (max-width : 768px) {
   .social-nav {
     position:fixed;
     top: 0px;
@@ -119,10 +119,10 @@
   }
 }
 
-@media only screen and (max-width : 480px) {
+@media screen and (max-width : 480px) {
   .sub-title {
     font-size: 1.3em;
-    left: 5%;
+    left: 10%;
   }
   .sub-quote {
     text-align: center;
@@ -177,4 +177,8 @@
     font: normal normal 1.5em /20px Ubuntu, sans-serif;
     color: black;
   }
+}
+
+@media only screen and (max-width : 480px) {
+
 }
